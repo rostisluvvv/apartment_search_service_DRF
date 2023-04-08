@@ -3,13 +3,6 @@ from django.contrib.auth.models import AbstractUser
 
 
 class ServiceUser(AbstractUser):
-    # username
-    # first_name
-    # last_name
-    # email
-    # user_permissions
-    # last_login
-    # date_joined
     avatar = models.ImageField(upload_to='user/avatar/',
                                blank=True,
                                null=True)
