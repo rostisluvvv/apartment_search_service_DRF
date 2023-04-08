@@ -6,12 +6,14 @@ from .models import ServiceUser, Favorites
 
 
 class ServiceUserAdmin(UserAdmin):
-    list_display = ('username',
+    list_display = ('id',
+                    'username',
                     'email',
                     'phone_number',
                     'first_name',
                     'last_name',
                     'is_staff')
+
     fieldsets = (
         (None, {'fields': ('username', 'password')}),
         (_('Personal info'), {'fields': ('first_name',
@@ -30,8 +32,9 @@ class ServiceUserAdmin(UserAdmin):
              ),
          },),
         (_('Important dates'), {'fields': ('last_login', 'date_joined')}),
-        (_('info'), {'fields': ('avatar', 'favorites')}),
+        (_('info'), {'fields': ('avatar', )}),
     )
+    list_display_links = ('id', 'username')
 
 
 class FavoritesAdmin(admin.ModelAdmin):

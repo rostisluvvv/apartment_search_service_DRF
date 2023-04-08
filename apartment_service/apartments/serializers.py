@@ -9,7 +9,7 @@ class ApartmentInfoSerializer(serializers.ModelSerializer):
         model = ApartmentInfo
         fields = ('title',
                   'landlord',
-                  'favorites',
+                  # 'favorites',
                   'city',
                   'address',
                   'apartment_area',

@@ -7,7 +7,6 @@ class ServiceUser(AbstractUser):
     # first_name
     # last_name
     # email
-    # password
     # user_permissions
     # last_login
     # date_joined
@@ -26,11 +25,9 @@ class Favorites(models.Model):
                                      related_name='favorites',
                                      on_delete=models.CASCADE)
     city = models.CharField(max_length=250, blank=True, null=True)
-    apartment_area_gte = models.FloatField(max_length=30,
-                                           blank=True,
+    apartment_area_gte = models.FloatField(blank=True,
                                            null=True)
-    apartment_area_lte = models.FloatField(max_length=30,
-                                           blank=True,
+    apartment_area_lte = models.FloatField(blank=True,
                                            null=True)
-    price_gte = models.FloatField(max_length=30, blank=True, null=True)
-    price_lte = models.FloatField(max_length=30, blank=True, null=True)
+    price_gte = models.FloatField(blank=True, null=True)
+    price_lte = models.FloatField(blank=True, null=True)

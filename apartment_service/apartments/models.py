@@ -14,7 +14,7 @@ class ApartmentInfo(models.Model):
     address = models.CharField(max_length=100)
     apartment_area = models.FloatField(max_length=30)
     price = models.FloatField(max_length=30)
-    published = models.DateTimeField()
+    published = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
